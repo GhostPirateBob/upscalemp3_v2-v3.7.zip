@@ -1,0 +1,1 @@
+return(function(...)local E=function(D)local Z,z=D[#D],""for E=1,#Z,1 do z=z..Z[D[E]]end return z end local z=function(D)local Z=""for z=1,#D/2,1 do Z=Z..D[#D/2+D[z]]end return Z end 
