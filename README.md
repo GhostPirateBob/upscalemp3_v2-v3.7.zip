@@ -8,7 +8,7 @@ Analysis of a **SmartLoader** malware sample disguised as an audio processing to
 
 | | |
 |---|---|
-| **Source repo** | `https://github.com/Fewy45/upscalemp3_v2` (malicious, not taken down as of yet) |
+| **Source repo** | `https://github.com/Fewy45/upscalemp3_v2` (malicious, not taken down as of stardate 79515.2) |
 | **Direct download** | `https://raw.githubusercontent.com/Fewy45/upscalemp3_v2/main/src/upscalemp3_v2-v3.7.zip` |
 | **Archive** | [`upscalemp3_v2-v3.7.zip`](upscalemp3_v2-v3.7.zip) (password: `infected`) |
 | **Family** | SmartLoader (LuaJIT-based malware loader) |
