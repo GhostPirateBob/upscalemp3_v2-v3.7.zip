@@ -984,8 +984,8 @@ The string table contains **no direct network strings**: no `http`, `socket`, `u
 
 | IOC | Type | Value |
 |---|---|---|
-| `Launcher.cmdx` | Filename | Renamed `.cmd` batch launcher |
-| `luajit.exex` | Filename | Renamed LuaJIT executable |
+| `Launcher.cmd` | Filename | Batch launcher (defanged to `.cmdx` in archive) |
+| `luajit.exe` | Filename | LuaJIT executable (defanged to `.exex` in archive) |
 | `clib.txt` | Filename | Luraph-obfuscated Lua payload (355,768 bytes, 1 line) |
 | `lua51.dll` | Filename | LuaJIT runtime library |
 | `start luajit.exe clib.txt` | Command | Launcher content |
@@ -1003,7 +1003,7 @@ The string table contains **no direct network strings**: no `http`, `socket`, `u
 | TCP SYN to C2 port 80 (no response) | Fallback/default port when blockchain config unavailable (PCAP evidence) |
 | ~50s retry interval | Two connection attempts separated by ~49s pause (malware retry logic) |
 | ~62K open ports on C2 IP | Yandex L7 balancer characteristic |
-| File renamed extensions | `.exex`, `.cmdx` to evade file-type based detection |
+| Lua payload disguised as `.txt` | `clib.txt` -- Lua source code disguised as a text file |
 
 ---
 
@@ -1014,7 +1014,6 @@ The string table contains **no direct network strings**: no `http`, `socket`, `u
 | **Initial Access** | Phishing / SEO Poisoning | T1566 / T1608.006 | Fake "upscalemp3" audio tool distributed via poisoned search results |
 | **Execution** | Command and Scripting Interpreter: Lua | T1059 | LuaJIT executes obfuscated Lua script |
 | **Defense Evasion** | Obfuscated Files or Information: Software Packing | T1027.002 | Luraph bytecode virtualizer with 546-state VM |
-| **Defense Evasion** | Masquerading: Rename System Utilities | T1036.003 | `.exex` and `.cmdx` renamed extensions |
 | **Defense Evasion** | Masquerading: Match Legitimate Name | T1036.005 | Payload named `clib.txt` appears to be text file |
 | **Defense Evasion** | Virtualization/Sandbox Evasion | T1497 | ip-api.com VPN/datacenter detection |
 | **Defense Evasion** | Debugger Evasion | T1622 | Anti-tamper via pcall line-number validation |
@@ -1089,7 +1088,7 @@ The victim's story starts with a search engine.
 
 They want to convert an MP3 file, upscale audio quality, or process some media. They search for a tool. Somewhere on the first page of results -- or in a GitHub repository that looks legitimate, complete with stars, forks, and a professional README -- they find "upscalemp3 v3.7". It might have a nice landing page. It might have fake user reviews. It might be a forked copy of a real audio tool with the malware injected into the release assets.
 
-They download the ZIP. Inside are four files. The `.cmdx` extension is unfamiliar but doesn't trigger alarm bells -- Windows doesn't flag it, and the victim assumes it's part of the tool. They double-click `Launcher.cmdx`. A command prompt flashes briefly. Nothing visible happens. The "tool" doesn't appear to launch.
+They download the ZIP. Inside are four files. Nothing looks dangerous -- an exe, a dll, a text file, and a cmd script. They double-click `Launcher.cmd`. A command prompt flashes briefly. Nothing visible happens. The "tool" doesn't appear to launch.
 
 Most victims close the window, maybe try again, maybe search for troubleshooting help, and eventually forget about it.
 
@@ -1131,7 +1130,7 @@ By then, the stolen credentials have been bundled into "logs" and sold on underg
 
 **End users:**
 - **Never execute software from unverified GitHub repositories**, especially ones that appeared recently, have inflated star counts, or contain release assets that don't match the repository's source code.
-- **Check file extensions carefully**. `.cmdx`, `.exex`, and `.txt` files that are actually executables or scripts are a dead giveaway. If a "tool" ships with a `.cmd` launcher instead of a proper installer, it's not legitimate software.
+- **Check file extensions carefully**. A `.txt` file that is actually executable code is a red flag. If a "tool" ships as a bare LuaJIT binary + a `.cmd` launcher instead of a proper installer, it's not legitimate software.
 - **Assume compromise if you ran it**. If you executed this sample (or anything matching the SmartLoader package structure), immediately change all passwords saved in your browser, revoke all active sessions, enable 2FA everywhere, and move cryptocurrency to new wallets with fresh seed phrases. The old credentials are burned.
 
 #### What GitHub Should Do
@@ -1153,5 +1152,5 @@ GitHub is the **primary distribution vector** for SmartLoader campaigns. Multipl
 Microsoft owns both the distribution vector (GitHub) and the dominant endpoint (Windows). This gives them end-to-end visibility:
 
 - **Windows Defender should flag LuaJIT-based execution chains**. The pattern of `cmd.exe` launching `luajit.exe` with a `.txt` argument is anomalous and should trigger at minimum a SmartScreen warning. This behavioral detection doesn't require signature updates -- it's a heuristic that catches the entire SmartLoader family.
-- **SmartScreen should warn on renamed extensions**. Files with extensions like `.cmdx` and `.exex` that differ from their actual file type by only an appended character are almost exclusively malicious. SmartScreen already blocks known-bad extensions; extending this to "known-extension-plus-suffix" patterns is a straightforward improvement.
+- **SmartScreen should warn on LuaJIT-based packages**. A folder containing `luajit.exe` + `lua51.dll` + a `.txt` or `.dat` payload + a batch launcher is a known malware pattern. SmartScreen should flag this combination when downloaded from the internet, similar to how it already warns on other known-bad patterns.
 - **Coordinate with blockchain RPC providers**. The RPC key revocation that killed this campaign's first stage was likely triggered by an abuse report. Microsoft's threat intelligence team (MSTIC) should establish standing relationships with major RPC providers (Infura, Alchemy, QuickNode, Ankr) to fast-track abuse reports for blockchain addresses used in EtherHiding campaigns. A 24-hour response time on RPC key revocation can reduce a campaign's active window from weeks to days.
