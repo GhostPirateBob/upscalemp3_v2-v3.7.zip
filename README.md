@@ -4,6 +4,9 @@ Analysis of a **SmartLoader** malware sample disguised as an audio processing to
 
 > **Campaign status:** Dead... or just good at hiding from sandboxes... Blockchain RPC API key revoked; C2 backend still alive behind Yandex.
 
+## Final Threat Assessment Report
+- [threat-assessment.md](https://github.com/GhostPirateBob/upscalemp3_v2-v3.7.zip/blob/main/threat-assessment.md)
+
 ## Sample Origin
 
 | | |
