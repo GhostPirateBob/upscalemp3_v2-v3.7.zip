@@ -807,10 +807,10 @@ A packet capture from the victim's network (`out.pcapng`) contains **9 packets**
 
 #### Connection Summary
 
-| Stream | Src Port | Dst Port | Packets | Time Span | Result |
+| Run | Src Port | Dst Port | Packets | Time Span | Result |
 |---|---|---|---|---|---|
-| 0 | 50030 | **80** (HTTP) | 4 (SYN + 3 retrans) | 0.000s -- 1.547s | **No response** (SYN_SENT) |
-| 1 | 50042 | **80** (HTTP) | 5 (SYN + 4 retrans) | 50.525s -- 52.603s | **No response** (SYN_SENT) |
+| 1st execution | 50030 | **80** (HTTP) | 4 (SYN + 3 retrans) | 0.000s -- 1.547s | **No response** (SYN_SENT) |
+| 2nd execution | 50042 | **80** (HTTP) | 5 (SYN + 4 retrans) | 50.525s -- 52.603s | **No response** (SYN_SENT) |
 
 #### Raw Packet Detail (Stream 0, Initial SYN)
 
@@ -830,7 +830,7 @@ A packet capture from the victim's network (`out.pcapng`) contains **9 packets**
 
 3. **Aggressive retransmission timing.** Retransmissions at ~0.5s intervals (standard TCP starts at 1s and doubles). This is the Windows TCP/IP stack default for SYN retransmissions, not a custom implementation -- the malware is using standard socket calls, not raw sockets.
 
-4. **~50-second gap between attempts.** Stream 0 fails after ~1.5s (4 SYNs), then stream 1 starts at t=50.5s. This 49-second pause is the malware's internal retry/timeout logic, not TCP's exponential backoff.
+4. **~50-second gap between attempts.** Stream 0 fails after ~1.5s (4 SYNs), then stream 1 starts at t=50.5s. This gap is the analyst running the malware a second time, not an internal retry mechanism. Each execution produces one connection attempt with 3-4 SYN retransmissions before giving up.
 
 5. **Sequential IP identification numbers.** IP IDs increment by exactly 1 across all 9 packets (0xc5c8 through 0xc5d0), meaning virtually no other traffic was leaving this machine. Consistent with a clean VM or sandbox environment.
 
@@ -1001,7 +1001,7 @@ The string table contains **no direct network strings**: no `http`, `socket`, `u
 | HTTP GET to `ip-api.com` | Geolocation fingerprinting |
 | TLS to IP with Yandex cert | Connection to raw IP serving `*.yandex.tr` certificate |
 | TCP SYN to C2 port 80 (no response) | Fallback/default port when blockchain config unavailable (PCAP evidence) |
-| ~50s retry interval | Two connection attempts separated by ~49s pause (malware retry logic) |
+| Single C2 connection attempt per execution | One SYN + 3-4 retransmissions, then gives up (PCAP shows two runs by analyst) |
 | ~62K open ports on C2 IP | Yandex L7 balancer characteristic |
 | Lua payload disguised as `.txt` | `clib.txt` -- Lua source code disguised as a text file |
 
