@@ -1,0 +1,582 @@
+No.     Time           Source                Destination           Protocol Length Info
+      1 0.000000       192.168.100.8         80.253.249.107        TCP      66     50030 → 80 [SYN] Seq=0 Win=65535 Len=0 MSS=1460 WS=256 SACK_PERM
+
+Frame 1: Packet, 66 bytes on wire (528 bits), 66 bytes captured (528 bits) on interface unknown, id 0
+Ethernet II, Src: b8:19:75:7d:25:48 (b8:19:75:7d:25:48), Dst: d4:da:6d:9d:66:3e (d4:da:6d:9d:66:3e)
+    Destination: d4:da:6d:9d:66:3e (d4:da:6d:9d:66:3e)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Source: b8:19:75:7d:25:48 (b8:19:75:7d:25:48)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Type: IPv4 (0x0800)
+    [Stream index: 0]
+Internet Protocol Version 4, Src: 192.168.100.8, Dst: 80.253.249.107
+    0100 .... = Version: 4
+    .... 0101 = Header Length: 20 bytes (5)
+    Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+    Total Length: 52
+    Identification: 0xc5c8 (50632)
+    010. .... = Flags: 0x2, Don't fragment
+        0... .... = Reserved bit: Not set
+        .1.. .... = Don't fragment: Set
+        ..0. .... = More fragments: Not set
+    ...0 0000 0000 0000 = Fragment Offset: 0
+    Time to Live: 128
+    Protocol: TCP (6)
+    Header Checksum: 0xc5e1 [validation disabled]
+    [Header checksum status: Unverified]
+    Source Address: 192.168.100.8
+    Destination Address: 80.253.249.107
+    [Stream index: 0]
+Transmission Control Protocol, Src Port: 50030, Dst Port: 80, Seq: 0, Len: 0
+    Source Port: 50030
+    Destination Port: 80
+    [Stream index: 0]
+    [Stream Packet Number: 1]
+    [Conversation completeness: Incomplete, SYN_SENT (1)]
+    [TCP Segment Len: 0]
+    Sequence Number: 0    (relative sequence number)
+    Sequence Number (raw): 3443319096
+    [Next Sequence Number: 1    (relative sequence number)]
+    Acknowledgment Number: 0
+    Acknowledgment number (raw): 0
+    1000 .... = Header Length: 32 bytes (8)
+    Flags: 0x002 (SYN)
+    Window: 65535
+    [Calculated window size: 65535]
+    Checksum: 0x8dc2 [unverified]
+    [Checksum Status: Unverified]
+    Urgent Pointer: 0
+    Options: (12 bytes), Maximum segment size, No-Operation (NOP), Window scale, No-Operation (NOP), No-Operation (NOP), SACK permitted
+        TCP Option - Maximum segment size: 1460 bytes
+        TCP Option - No-Operation (NOP)
+            Kind: No-Operation (1)
+        TCP Option - Window scale: 8 (multiply by 256)
+        TCP Option - No-Operation (NOP)
+            Kind: No-Operation (1)
+        TCP Option - No-Operation (NOP)
+            Kind: No-Operation (1)
+        TCP Option - SACK permitted
+    [Timestamps]
+    [Client Contiguous Streams: 0]
+    [Server Contiguous Streams: 1]
+
+No.     Time           Source                Destination           Protocol Length Info
+      2 0.515711       192.168.100.8         80.253.249.107        TCP      66     [TCP Retransmission] 50030 → 80 [SYN] Seq=0 Win=65535 Len=0 MSS=1460 WS=256 SACK_PERM
+
+Frame 2: Packet, 66 bytes on wire (528 bits), 66 bytes captured (528 bits) on interface unknown, id 0
+Ethernet II, Src: b8:19:75:7d:25:48 (b8:19:75:7d:25:48), Dst: d4:da:6d:9d:66:3e (d4:da:6d:9d:66:3e)
+    Destination: d4:da:6d:9d:66:3e (d4:da:6d:9d:66:3e)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Source: b8:19:75:7d:25:48 (b8:19:75:7d:25:48)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Type: IPv4 (0x0800)
+    [Stream index: 0]
+Internet Protocol Version 4, Src: 192.168.100.8, Dst: 80.253.249.107
+    0100 .... = Version: 4
+    .... 0101 = Header Length: 20 bytes (5)
+    Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+    Total Length: 52
+    Identification: 0xc5c9 (50633)
+    010. .... = Flags: 0x2, Don't fragment
+        0... .... = Reserved bit: Not set
+        .1.. .... = Don't fragment: Set
+        ..0. .... = More fragments: Not set
+    ...0 0000 0000 0000 = Fragment Offset: 0
+    Time to Live: 128
+    Protocol: TCP (6)
+    Header Checksum: 0xc5e0 [validation disabled]
+    [Header checksum status: Unverified]
+    Source Address: 192.168.100.8
+    Destination Address: 80.253.249.107
+    [Stream index: 0]
+Transmission Control Protocol, Src Port: 50030, Dst Port: 80, Seq: 0, Len: 0
+    Source Port: 50030
+    Destination Port: 80
+    [Stream index: 0]
+    [Stream Packet Number: 2]
+    [Conversation completeness: Incomplete, SYN_SENT (1)]
+    [TCP Segment Len: 0]
+    Sequence Number: 0    (relative sequence number)
+    Sequence Number (raw): 3443319096
+    [Next Sequence Number: 1    (relative sequence number)]
+    Acknowledgment Number: 0
+    Acknowledgment number (raw): 0
+    1000 .... = Header Length: 32 bytes (8)
+    Flags: 0x002 (SYN)
+    Window: 65535
+    [Calculated window size: 65535]
+    Checksum: 0x8dc2 [unverified]
+    [Checksum Status: Unverified]
+    Urgent Pointer: 0
+    Options: (12 bytes), Maximum segment size, No-Operation (NOP), Window scale, No-Operation (NOP), No-Operation (NOP), SACK permitted
+        TCP Option - Maximum segment size: 1460 bytes
+        TCP Option - No-Operation (NOP)
+            Kind: No-Operation (1)
+        TCP Option - Window scale: 8 (multiply by 256)
+        TCP Option - No-Operation (NOP)
+            Kind: No-Operation (1)
+        TCP Option - No-Operation (NOP)
+            Kind: No-Operation (1)
+        TCP Option - SACK permitted
+    [Timestamps]
+    [SEQ/ACK analysis]
+    [Client Contiguous Streams: 0]
+    [Server Contiguous Streams: 1]
+
+No.     Time           Source                Destination           Protocol Length Info
+      3 1.031305       192.168.100.8         80.253.249.107        TCP      66     [TCP Retransmission] 50030 → 80 [SYN] Seq=0 Win=65535 Len=0 MSS=1460 WS=256 SACK_PERM
+
+Frame 3: Packet, 66 bytes on wire (528 bits), 66 bytes captured (528 bits) on interface unknown, id 0
+Ethernet II, Src: b8:19:75:7d:25:48 (b8:19:75:7d:25:48), Dst: d4:da:6d:9d:66:3e (d4:da:6d:9d:66:3e)
+    Destination: d4:da:6d:9d:66:3e (d4:da:6d:9d:66:3e)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Source: b8:19:75:7d:25:48 (b8:19:75:7d:25:48)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Type: IPv4 (0x0800)
+    [Stream index: 0]
+Internet Protocol Version 4, Src: 192.168.100.8, Dst: 80.253.249.107
+    0100 .... = Version: 4
+    .... 0101 = Header Length: 20 bytes (5)
+    Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+    Total Length: 52
+    Identification: 0xc5ca (50634)
+    010. .... = Flags: 0x2, Don't fragment
+        0... .... = Reserved bit: Not set
+        .1.. .... = Don't fragment: Set
+        ..0. .... = More fragments: Not set
+    ...0 0000 0000 0000 = Fragment Offset: 0
+    Time to Live: 128
+    Protocol: TCP (6)
+    Header Checksum: 0xc5df [validation disabled]
+    [Header checksum status: Unverified]
+    Source Address: 192.168.100.8
+    Destination Address: 80.253.249.107
+    [Stream index: 0]
+Transmission Control Protocol, Src Port: 50030, Dst Port: 80, Seq: 0, Len: 0
+    Source Port: 50030
+    Destination Port: 80
+    [Stream index: 0]
+    [Stream Packet Number: 3]
+    [Conversation completeness: Incomplete, SYN_SENT (1)]
+    [TCP Segment Len: 0]
+    Sequence Number: 0    (relative sequence number)
+    Sequence Number (raw): 3443319096
+    [Next Sequence Number: 1    (relative sequence number)]
+    Acknowledgment Number: 0
+    Acknowledgment number (raw): 0
+    1000 .... = Header Length: 32 bytes (8)
+    Flags: 0x002 (SYN)
+    Window: 65535
+    [Calculated window size: 65535]
+    Checksum: 0x8dc2 [unverified]
+    [Checksum Status: Unverified]
+    Urgent Pointer: 0
+    Options: (12 bytes), Maximum segment size, No-Operation (NOP), Window scale, No-Operation (NOP), No-Operation (NOP), SACK permitted
+        TCP Option - Maximum segment size: 1460 bytes
+        TCP Option - No-Operation (NOP)
+            Kind: No-Operation (1)
+        TCP Option - Window scale: 8 (multiply by 256)
+        TCP Option - No-Operation (NOP)
+            Kind: No-Operation (1)
+        TCP Option - No-Operation (NOP)
+            Kind: No-Operation (1)
+        TCP Option - SACK permitted
+    [Timestamps]
+    [SEQ/ACK analysis]
+    [Client Contiguous Streams: 0]
+    [Server Contiguous Streams: 1]
+
+No.     Time           Source                Destination           Protocol Length Info
+      4 1.546964       192.168.100.8         80.253.249.107        TCP      66     [TCP Retransmission] 50030 → 80 [SYN] Seq=0 Win=65535 Len=0 MSS=1460 WS=256 SACK_PERM
+
+Frame 4: Packet, 66 bytes on wire (528 bits), 66 bytes captured (528 bits) on interface unknown, id 0
+Ethernet II, Src: b8:19:75:7d:25:48 (b8:19:75:7d:25:48), Dst: d4:da:6d:9d:66:3e (d4:da:6d:9d:66:3e)
+    Destination: d4:da:6d:9d:66:3e (d4:da:6d:9d:66:3e)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Source: b8:19:75:7d:25:48 (b8:19:75:7d:25:48)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Type: IPv4 (0x0800)
+    [Stream index: 0]
+Internet Protocol Version 4, Src: 192.168.100.8, Dst: 80.253.249.107
+    0100 .... = Version: 4
+    .... 0101 = Header Length: 20 bytes (5)
+    Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+    Total Length: 52
+    Identification: 0xc5cb (50635)
+    010. .... = Flags: 0x2, Don't fragment
+        0... .... = Reserved bit: Not set
+        .1.. .... = Don't fragment: Set
+        ..0. .... = More fragments: Not set
+    ...0 0000 0000 0000 = Fragment Offset: 0
+    Time to Live: 128
+    Protocol: TCP (6)
+    Header Checksum: 0xc5de [validation disabled]
+    [Header checksum status: Unverified]
+    Source Address: 192.168.100.8
+    Destination Address: 80.253.249.107
+    [Stream index: 0]
+Transmission Control Protocol, Src Port: 50030, Dst Port: 80, Seq: 0, Len: 0
+    Source Port: 50030
+    Destination Port: 80
+    [Stream index: 0]
+    [Stream Packet Number: 4]
+    [Conversation completeness: Incomplete, SYN_SENT (1)]
+    [TCP Segment Len: 0]
+    Sequence Number: 0    (relative sequence number)
+    Sequence Number (raw): 3443319096
+    [Next Sequence Number: 1    (relative sequence number)]
+    Acknowledgment Number: 0
+    Acknowledgment number (raw): 0
+    1000 .... = Header Length: 32 bytes (8)
+    Flags: 0x002 (SYN)
+    Window: 65535
+    [Calculated window size: 65535]
+    Checksum: 0x8dc2 [unverified]
+    [Checksum Status: Unverified]
+    Urgent Pointer: 0
+    Options: (12 bytes), Maximum segment size, No-Operation (NOP), Window scale, No-Operation (NOP), No-Operation (NOP), SACK permitted
+        TCP Option - Maximum segment size: 1460 bytes
+        TCP Option - No-Operation (NOP)
+            Kind: No-Operation (1)
+        TCP Option - Window scale: 8 (multiply by 256)
+        TCP Option - No-Operation (NOP)
+            Kind: No-Operation (1)
+        TCP Option - No-Operation (NOP)
+            Kind: No-Operation (1)
+        TCP Option - SACK permitted
+    [Timestamps]
+    [SEQ/ACK analysis]
+    [Client Contiguous Streams: 0]
+    [Server Contiguous Streams: 1]
+
+No.     Time           Source                Destination           Protocol Length Info
+      5 50.525490      192.168.100.8         80.253.249.107        TCP      66     50042 → 80 [SYN] Seq=0 Win=65535 Len=0 MSS=1460 WS=256 SACK_PERM
+
+Frame 5: Packet, 66 bytes on wire (528 bits), 66 bytes captured (528 bits) on interface unknown, id 0
+Ethernet II, Src: b8:19:75:7d:25:48 (b8:19:75:7d:25:48), Dst: d4:da:6d:9d:66:3e (d4:da:6d:9d:66:3e)
+    Destination: d4:da:6d:9d:66:3e (d4:da:6d:9d:66:3e)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Source: b8:19:75:7d:25:48 (b8:19:75:7d:25:48)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Type: IPv4 (0x0800)
+    [Stream index: 0]
+Internet Protocol Version 4, Src: 192.168.100.8, Dst: 80.253.249.107
+    0100 .... = Version: 4
+    .... 0101 = Header Length: 20 bytes (5)
+    Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+    Total Length: 52
+    Identification: 0xc5cc (50636)
+    010. .... = Flags: 0x2, Don't fragment
+        0... .... = Reserved bit: Not set
+        .1.. .... = Don't fragment: Set
+        ..0. .... = More fragments: Not set
+    ...0 0000 0000 0000 = Fragment Offset: 0
+    Time to Live: 128
+    Protocol: TCP (6)
+    Header Checksum: 0xc5dd [validation disabled]
+    [Header checksum status: Unverified]
+    Source Address: 192.168.100.8
+    Destination Address: 80.253.249.107
+    [Stream index: 0]
+Transmission Control Protocol, Src Port: 50042, Dst Port: 80, Seq: 0, Len: 0
+    Source Port: 50042
+    Destination Port: 80
+    [Stream index: 1]
+    [Stream Packet Number: 1]
+    [Conversation completeness: Incomplete, SYN_SENT (1)]
+    [TCP Segment Len: 0]
+    Sequence Number: 0    (relative sequence number)
+    Sequence Number (raw): 3886003079
+    [Next Sequence Number: 1    (relative sequence number)]
+    Acknowledgment Number: 0
+    Acknowledgment number (raw): 0
+    1000 .... = Header Length: 32 bytes (8)
+    Flags: 0x002 (SYN)
+    Window: 65535
+    [Calculated window size: 65535]
+    Checksum: 0xa104 [unverified]
+    [Checksum Status: Unverified]
+    Urgent Pointer: 0
+    Options: (12 bytes), Maximum segment size, No-Operation (NOP), Window scale, No-Operation (NOP), No-Operation (NOP), SACK permitted
+        TCP Option - Maximum segment size: 1460 bytes
+        TCP Option - No-Operation (NOP)
+            Kind: No-Operation (1)
+        TCP Option - Window scale: 8 (multiply by 256)
+        TCP Option - No-Operation (NOP)
+            Kind: No-Operation (1)
+        TCP Option - No-Operation (NOP)
+            Kind: No-Operation (1)
+        TCP Option - SACK permitted
+    [Timestamps]
+    [Client Contiguous Streams: 0]
+    [Server Contiguous Streams: 1]
+
+No.     Time           Source                Destination           Protocol Length Info
+      6 51.040630      192.168.100.8         80.253.249.107        TCP      66     [TCP Retransmission] 50042 → 80 [SYN] Seq=0 Win=65535 Len=0 MSS=1460 WS=256 SACK_PERM
+
+Frame 6: Packet, 66 bytes on wire (528 bits), 66 bytes captured (528 bits) on interface unknown, id 0
+Ethernet II, Src: b8:19:75:7d:25:48 (b8:19:75:7d:25:48), Dst: d4:da:6d:9d:66:3e (d4:da:6d:9d:66:3e)
+    Destination: d4:da:6d:9d:66:3e (d4:da:6d:9d:66:3e)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Source: b8:19:75:7d:25:48 (b8:19:75:7d:25:48)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Type: IPv4 (0x0800)
+    [Stream index: 0]
+Internet Protocol Version 4, Src: 192.168.100.8, Dst: 80.253.249.107
+    0100 .... = Version: 4
+    .... 0101 = Header Length: 20 bytes (5)
+    Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+    Total Length: 52
+    Identification: 0xc5cd (50637)
+    010. .... = Flags: 0x2, Don't fragment
+        0... .... = Reserved bit: Not set
+        .1.. .... = Don't fragment: Set
+        ..0. .... = More fragments: Not set
+    ...0 0000 0000 0000 = Fragment Offset: 0
+    Time to Live: 128
+    Protocol: TCP (6)
+    Header Checksum: 0xc5dc [validation disabled]
+    [Header checksum status: Unverified]
+    Source Address: 192.168.100.8
+    Destination Address: 80.253.249.107
+    [Stream index: 0]
+Transmission Control Protocol, Src Port: 50042, Dst Port: 80, Seq: 0, Len: 0
+    Source Port: 50042
+    Destination Port: 80
+    [Stream index: 1]
+    [Stream Packet Number: 2]
+    [Conversation completeness: Incomplete, SYN_SENT (1)]
+    [TCP Segment Len: 0]
+    Sequence Number: 0    (relative sequence number)
+    Sequence Number (raw): 3886003079
+    [Next Sequence Number: 1    (relative sequence number)]
+    Acknowledgment Number: 0
+    Acknowledgment number (raw): 0
+    1000 .... = Header Length: 32 bytes (8)
+    Flags: 0x002 (SYN)
+    Window: 65535
+    [Calculated window size: 65535]
+    Checksum: 0xa104 [unverified]
+    [Checksum Status: Unverified]
+    Urgent Pointer: 0
+    Options: (12 bytes), Maximum segment size, No-Operation (NOP), Window scale, No-Operation (NOP), No-Operation (NOP), SACK permitted
+        TCP Option - Maximum segment size: 1460 bytes
+        TCP Option - No-Operation (NOP)
+            Kind: No-Operation (1)
+        TCP Option - Window scale: 8 (multiply by 256)
+        TCP Option - No-Operation (NOP)
+            Kind: No-Operation (1)
+        TCP Option - No-Operation (NOP)
+            Kind: No-Operation (1)
+        TCP Option - SACK permitted
+    [Timestamps]
+    [SEQ/ACK analysis]
+    [Client Contiguous Streams: 0]
+    [Server Contiguous Streams: 1]
+
+No.     Time           Source                Destination           Protocol Length Info
+      7 51.556263      192.168.100.8         80.253.249.107        TCP      66     [TCP Retransmission] 50042 → 80 [SYN] Seq=0 Win=65535 Len=0 MSS=1460 WS=256 SACK_PERM
+
+Frame 7: Packet, 66 bytes on wire (528 bits), 66 bytes captured (528 bits) on interface unknown, id 0
+Ethernet II, Src: b8:19:75:7d:25:48 (b8:19:75:7d:25:48), Dst: d4:da:6d:9d:66:3e (d4:da:6d:9d:66:3e)
+    Destination: d4:da:6d:9d:66:3e (d4:da:6d:9d:66:3e)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Source: b8:19:75:7d:25:48 (b8:19:75:7d:25:48)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Type: IPv4 (0x0800)
+    [Stream index: 0]
+Internet Protocol Version 4, Src: 192.168.100.8, Dst: 80.253.249.107
+    0100 .... = Version: 4
+    .... 0101 = Header Length: 20 bytes (5)
+    Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+    Total Length: 52
+    Identification: 0xc5ce (50638)
+    010. .... = Flags: 0x2, Don't fragment
+        0... .... = Reserved bit: Not set
+        .1.. .... = Don't fragment: Set
+        ..0. .... = More fragments: Not set
+    ...0 0000 0000 0000 = Fragment Offset: 0
+    Time to Live: 128
+    Protocol: TCP (6)
+    Header Checksum: 0xc5db [validation disabled]
+    [Header checksum status: Unverified]
+    Source Address: 192.168.100.8
+    Destination Address: 80.253.249.107
+    [Stream index: 0]
+Transmission Control Protocol, Src Port: 50042, Dst Port: 80, Seq: 0, Len: 0
+    Source Port: 50042
+    Destination Port: 80
+    [Stream index: 1]
+    [Stream Packet Number: 3]
+    [Conversation completeness: Incomplete, SYN_SENT (1)]
+    [TCP Segment Len: 0]
+    Sequence Number: 0    (relative sequence number)
+    Sequence Number (raw): 3886003079
+    [Next Sequence Number: 1    (relative sequence number)]
+    Acknowledgment Number: 0
+    Acknowledgment number (raw): 0
+    1000 .... = Header Length: 32 bytes (8)
+    Flags: 0x002 (SYN)
+    Window: 65535
+    [Calculated window size: 65535]
+    Checksum: 0xa104 [unverified]
+    [Checksum Status: Unverified]
+    Urgent Pointer: 0
+    Options: (12 bytes), Maximum segment size, No-Operation (NOP), Window scale, No-Operation (NOP), No-Operation (NOP), SACK permitted
+        TCP Option - Maximum segment size: 1460 bytes
+        TCP Option - No-Operation (NOP)
+            Kind: No-Operation (1)
+        TCP Option - Window scale: 8 (multiply by 256)
+        TCP Option - No-Operation (NOP)
+            Kind: No-Operation (1)
+        TCP Option - No-Operation (NOP)
+            Kind: No-Operation (1)
+        TCP Option - SACK permitted
+    [Timestamps]
+    [SEQ/ACK analysis]
+    [Client Contiguous Streams: 0]
+    [Server Contiguous Streams: 1]
+
+No.     Time           Source                Destination           Protocol Length Info
+      8 52.071996      192.168.100.8         80.253.249.107        TCP      66     [TCP Retransmission] 50042 → 80 [SYN] Seq=0 Win=65535 Len=0 MSS=1460 WS=256 SACK_PERM
+
+Frame 8: Packet, 66 bytes on wire (528 bits), 66 bytes captured (528 bits) on interface unknown, id 0
+Ethernet II, Src: b8:19:75:7d:25:48 (b8:19:75:7d:25:48), Dst: d4:da:6d:9d:66:3e (d4:da:6d:9d:66:3e)
+    Destination: d4:da:6d:9d:66:3e (d4:da:6d:9d:66:3e)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Source: b8:19:75:7d:25:48 (b8:19:75:7d:25:48)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Type: IPv4 (0x0800)
+    [Stream index: 0]
+Internet Protocol Version 4, Src: 192.168.100.8, Dst: 80.253.249.107
+    0100 .... = Version: 4
+    .... 0101 = Header Length: 20 bytes (5)
+    Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+    Total Length: 52
+    Identification: 0xc5cf (50639)
+    010. .... = Flags: 0x2, Don't fragment
+        0... .... = Reserved bit: Not set
+        .1.. .... = Don't fragment: Set
+        ..0. .... = More fragments: Not set
+    ...0 0000 0000 0000 = Fragment Offset: 0
+    Time to Live: 128
+    Protocol: TCP (6)
+    Header Checksum: 0xc5da [validation disabled]
+    [Header checksum status: Unverified]
+    Source Address: 192.168.100.8
+    Destination Address: 80.253.249.107
+    [Stream index: 0]
+Transmission Control Protocol, Src Port: 50042, Dst Port: 80, Seq: 0, Len: 0
+    Source Port: 50042
+    Destination Port: 80
+    [Stream index: 1]
+    [Stream Packet Number: 4]
+    [Conversation completeness: Incomplete, SYN_SENT (1)]
+    [TCP Segment Len: 0]
+    Sequence Number: 0    (relative sequence number)
+    Sequence Number (raw): 3886003079
+    [Next Sequence Number: 1    (relative sequence number)]
+    Acknowledgment Number: 0
+    Acknowledgment number (raw): 0
+    1000 .... = Header Length: 32 bytes (8)
+    Flags: 0x002 (SYN)
+    Window: 65535
+    [Calculated window size: 65535]
+    Checksum: 0xa104 [unverified]
+    [Checksum Status: Unverified]
+    Urgent Pointer: 0
+    Options: (12 bytes), Maximum segment size, No-Operation (NOP), Window scale, No-Operation (NOP), No-Operation (NOP), SACK permitted
+        TCP Option - Maximum segment size: 1460 bytes
+        TCP Option - No-Operation (NOP)
+            Kind: No-Operation (1)
+        TCP Option - Window scale: 8 (multiply by 256)
+        TCP Option - No-Operation (NOP)
+            Kind: No-Operation (1)
+        TCP Option - No-Operation (NOP)
+            Kind: No-Operation (1)
+        TCP Option - SACK permitted
+    [Timestamps]
+    [SEQ/ACK analysis]
+    [Client Contiguous Streams: 0]
+    [Server Contiguous Streams: 1]
+
+No.     Time           Source                Destination           Protocol Length Info
+      9 52.603104      192.168.100.8         80.253.249.107        TCP      66     [TCP Retransmission] 50042 → 80 [SYN] Seq=0 Win=65535 Len=0 MSS=1460 WS=256 SACK_PERM
+
+Frame 9: Packet, 66 bytes on wire (528 bits), 66 bytes captured (528 bits) on interface unknown, id 0
+Ethernet II, Src: b8:19:75:7d:25:48 (b8:19:75:7d:25:48), Dst: d4:da:6d:9d:66:3e (d4:da:6d:9d:66:3e)
+    Destination: d4:da:6d:9d:66:3e (d4:da:6d:9d:66:3e)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Source: b8:19:75:7d:25:48 (b8:19:75:7d:25:48)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Type: IPv4 (0x0800)
+    [Stream index: 0]
+Internet Protocol Version 4, Src: 192.168.100.8, Dst: 80.253.249.107
+    0100 .... = Version: 4
+    .... 0101 = Header Length: 20 bytes (5)
+    Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+    Total Length: 52
+    Identification: 0xc5d0 (50640)
+    010. .... = Flags: 0x2, Don't fragment
+        0... .... = Reserved bit: Not set
+        .1.. .... = Don't fragment: Set
+        ..0. .... = More fragments: Not set
+    ...0 0000 0000 0000 = Fragment Offset: 0
+    Time to Live: 128
+    Protocol: TCP (6)
+    Header Checksum: 0xc5d9 [validation disabled]
+    [Header checksum status: Unverified]
+    Source Address: 192.168.100.8
+    Destination Address: 80.253.249.107
+    [Stream index: 0]
+Transmission Control Protocol, Src Port: 50042, Dst Port: 80, Seq: 0, Len: 0
+    Source Port: 50042
+    Destination Port: 80
+    [Stream index: 1]
+    [Stream Packet Number: 5]
+    [Conversation completeness: Incomplete, SYN_SENT (1)]
+    [TCP Segment Len: 0]
+    Sequence Number: 0    (relative sequence number)
+    Sequence Number (raw): 3886003079
+    [Next Sequence Number: 1    (relative sequence number)]
+    Acknowledgment Number: 0
+    Acknowledgment number (raw): 0
+    1000 .... = Header Length: 32 bytes (8)
+    Flags: 0x002 (SYN)
+    Window: 65535
+    [Calculated window size: 65535]
+    Checksum: 0xa104 [unverified]
+    [Checksum Status: Unverified]
+    Urgent Pointer: 0
+    Options: (12 bytes), Maximum segment size, No-Operation (NOP), Window scale, No-Operation (NOP), No-Operation (NOP), SACK permitted
+        TCP Option - Maximum segment size: 1460 bytes
+        TCP Option - No-Operation (NOP)
+            Kind: No-Operation (1)
+        TCP Option - Window scale: 8 (multiply by 256)
+        TCP Option - No-Operation (NOP)
+            Kind: No-Operation (1)
+        TCP Option - No-Operation (NOP)
+            Kind: No-Operation (1)
+        TCP Option - SACK permitted
+    [Timestamps]
+    [SEQ/ACK analysis]
+    [Client Contiguous Streams: 0]
+    [Server Contiguous Streams: 1]
