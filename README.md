@@ -2,13 +2,13 @@
 
 Analysis of a **SmartLoader** malware sample disguised as an audio processing tool. The payload is a LuaJIT-based loader protected by the **Luraph** commercial bytecode virtualizer, using **EtherHiding** (blockchain smart contract) for C2 configuration and **Yandex Cloud CDN** for command-and-control infrastructure.
 
-> **Campaign status:** Dead. Blockchain RPC API key revoked; C2 backend still alive behind Yandex but unreachable without the config.
+> **Campaign status:** Dead... or just good at hiding from sandboxes... Blockchain RPC API key revoked; C2 backend still alive behind Yandex.
 
 ## Sample Origin
 
 | | |
 |---|---|
-| **Source repo** | `https://github.com/Fewy45/upscalemp3_v2` (malicious, likely taken down) |
+| **Source repo** | `https://github.com/Fewy45/upscalemp3_v2` (malicious, not taken down as of yet) |
 | **Direct download** | `https://raw.githubusercontent.com/Fewy45/upscalemp3_v2/main/src/upscalemp3_v2-v3.7.zip` |
 | **Archive** | [`upscalemp3_v2-v3.7.zip`](upscalemp3_v2-v3.7.zip) (password: `infected`) |
 | **Family** | SmartLoader (LuaJIT-based malware loader) |
