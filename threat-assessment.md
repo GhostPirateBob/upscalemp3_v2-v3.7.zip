@@ -774,24 +774,24 @@ The HTTP 406 (Not Acceptable) response means the Yandex balancer is alive and pr
 ### Blockchain C2 Config: EtherHiding Architecture
 
 ```
-┌─────────────┐    eth_call getData()     ┌──────────────────────┐
+┌──────────────┐    eth_call getData()     ┌──────────────────────┐
 │  SmartLoader │ ───────────────────────>  │  Blockchain Contract │
-│  (victim PC) │ <─────────────────────── │  (Polygon/BSC/ETH)   │
+│  (victim PC) │ <───────────────────────  │  (Polygon/BSC/ETH)   │
 │              │    returns: C2 config     │  0x1823...bAdc       │
 │              │    (host, path, token)    └──────────────────────┘
 │              │
 │              │    HTTPS + Host: <config> ┌──────────────────────┐
 │              │ ───────────────────────>  │  Yandex L7 Balancer  │
-│              │ <─────────────────────── │  80.253.249.107       │
+│              │ <───────────────────────  │  80.253.249.107      │
 │              │    C2 commands/payload    │  (*.yandex.tr cert)  │
-└─────────────┘                           │         │             │
-                                          │    routes to          │
-                                          │         ▼             │
-                                          │  ┌──────────────┐    │
-                                          │  │ Attacker's    │    │
-                                          │  │ Backend       │    │
-                                          │  └──────────────┘    │
-                                          └──────────────────────┘
+└──────────────┘                           │        │             │
+                                           │    routes to         │
+                                           │         ▼            │
+                                           │  ┌──────────────┐    │
+                                           │  │ Attacker's   │    │
+                                           │  │ Backend      │    │
+                                           │  └──────────────┘    │
+                                           └──────────────────────┘
 ```
 
 **Why this architecture is effective:**
